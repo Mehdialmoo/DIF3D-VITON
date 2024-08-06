@@ -1,6 +1,6 @@
-# DIF3D: 3D Model Generation from Images
+# DIF3D_VITON: 3D Model Generation from Images
 
-![](./0001.webp)
+![](./Figures/Slide4)
 
 
 Table of Contents:
