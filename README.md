@@ -1,7 +1,6 @@
 # DIF3D_VITON: 3D Model Generation from Images
 
-![](./Figures/Slide4)
-
+![](./Figures/Slide4.PNG)
 
 Table of Contents:
 - [Repository map](#repositorymap)
@@ -49,7 +48,7 @@ Table of Contents:
 ## Motivation
 
 
-## Contribution
+## Achivements and contributions
 
 
 ## Setup
