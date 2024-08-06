@@ -1,4 +1,4 @@
-name: dif3d_ENV
+name: dif3d_viton_ENV
 
 channels:
   - conda-forge
