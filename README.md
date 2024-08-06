@@ -130,9 +130,8 @@ Runing the code completley will show case models and garments for selection, aft
 + #### A 3D mesh in the output/3dfiles/ directory.
 
 now let us look into different experiments that have been done:
-![](./Figures/Slide3)
-
-
+![](./Figures/Slide3.png)
+for more details here are the examples as  rendered videos:
 
 ## Methodology
 
