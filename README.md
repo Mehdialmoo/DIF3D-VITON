@@ -29,9 +29,12 @@ Table of Contents:
     │   ├── images
     │   └── renderfiles
     │
-    ├── viton/ [**]
-    │    
-    ├── tsr/ [**]
+    ├── viton/
+    │   ├── Data   
+    │   ├── eval
+    │   └── * other files
+    |
+    ├── tsr/ [*for more information you can visit DIF3D @*]
     │    
     ├── .gitignore
     ├── README.md
@@ -83,25 +86,19 @@ now, Set the input image path, we recommend to leave other values as defult but 
 other variables are as follows:
 
 ```
-output_path
-pre-trained_model_name
-chunk_size
-padding
-foreground_ratio
-resolution(mesh_extraction_resolution)
-format(model_save_format )
+
 ```
 all of these variables are reacheable using the set_variables method. like the code below:
 ```python
-B3D_fusiion.set_variables(input_path="picture_adrress")
+
 ```
 after setting the variables, you can initilize the models based on the variables as follows:
 ```python
-B3D_fusiion.initilize()
+
 ```
 now, you can run the main blocks of our work to start the image process as follows:
 ```python
-B3D_fusiion.img_process()
+
 ```
 until now if you have followed you will notice the program created a out put folder with three sub folders of different outputs what will be produced during the work. We will be discussing this in [Results]() section.
 next you need to Initialize the pre-model and TSR model using the initilize method to be able to run and gen 3d result from mesh , point cloud and forfront depth estimations. using below code
@@ -123,17 +120,17 @@ Here's an example usage:
 ```python
 ```
 all the steps are already been coded in workspace.ipynb file as well.
+
 ## Results
-Runing the code completley will show case preprocessing results and saves the final results ina folder named output as defualt (but you can change that also)The runtime environment generates the following output:
+Runing the code completley will show case models and garments for selection, after selecting and the system goes through preprocessing, VTO deforming and fitting then for 3D generation, finally results and saves the final results in a folder named output as defualt (but you can change that also)The runtime environment generates the following output:
 
 + ####  Processed images in the output/images/ directory.
 + #### Rendered images in the output/renderfiles/ directory.
 + #### A video of the rendered images in the output/renderfiles/ directory.
 + #### A 3D mesh in the output/3dfiles/ directory.
 
-now let us look into one of the experiments that have been done using the below picture
-
-after running the model it generated the followings:
+now let us look into different experiments that have been done:
+![](./Figures/Slide3)
 
 
 
