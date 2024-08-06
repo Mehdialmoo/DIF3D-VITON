@@ -107,29 +107,20 @@ until now if you have followed you will notice the program created a out put fol
 next you need to Initialize the pre-model and TSR model using the initilize method to be able to run and gen 3d result from mesh , point cloud and forfront depth estimations. using below code
 
 ```python
-B3D_fusiion.modelRun()
+
 ```
 Render the 3D model using the render method to generate mising point cloud areas.
 method.
 ```python
-B3D_fusiion.render()
+
 ```
 Finally to Export the 3D mesh in the specified format using the export_mesh :
 ```python
-B3D_fusiion.export_mesh()
+
 ```
 Here's an example usage:
 
 ```python
-
-    input_path="input/",
-    output_path="output/",
-    pretrained_model="stabilityai/TripoSR",
-    chunk_size=8192,
-    padding=16,
-    foreground_ratio=0.85,
-    mc_resolution=256,
-    model_save_format="obj"
 ```
 all the steps are already been coded in workspace.ipynb file as well.
 ## Results
@@ -142,49 +133,13 @@ Runing the code completley will show case preprocessing results and saves the fi
 
 now let us look into one of the experiments that have been done using the below picture
 
-![](./output/images/Removed_BG.png)
+after running the model it generated the followings:
 
-after running the model it generated the following depth map:
-
-![](./output/images/depth.png)
-
-and the rendering and 3D results are as follows:
-
-![](./output/renderfiles/render_000.png)
-![](./output/renderfiles/render_005.png)
-![](./output/renderfiles/render_010.png)
-![](./output/renderfiles/render_015.png)
-![](./output/renderfiles/render_020.png)
-![](./output/renderfiles/render_025.png)
-
-another example:
-using the below picture
-
-![](./output_2/images/Removed_BG.png)
-
-after running the model it generated the following depth map:
-
-![](./output_2/images/depth.png)
-
-and the rendering and 3D results are as follows:
-
-![](./output_2/renderfiles/render_000.png)
-![](./output_2/renderfiles/render_005.png)
-![](./output_2/renderfiles/render_010.png)
-![](./output_2/renderfiles/render_015.png)
-![](./output_2/renderfiles/render_020.png)
-![](./output_2/renderfiles/render_025.png)
 
 
 ## Methodology
 
-
-### Dif3d
-
-
-
 ### System
-
 
 ## Conclusion
 
