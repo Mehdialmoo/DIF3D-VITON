@@ -6,13 +6,13 @@ Table of Contents:
 - [Repository map](#repositorymap)
 - [Introduction](#introduction)
 - [Motivation](#motivation)
-- [Achivements and contributions](#achivementsandcontributions)
+- [Achivements and contributions](#achivements_and_contributions)
 - [Setup](#setup)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Results](#results)
 - [Methodology](#methodology)
--[Conclusion](#conclusion)
+- [Conclusion](#conclusion)
 
 ## Repositorymap
 ```
