@@ -6,7 +6,7 @@ Table of Contents:
 - [Repository map](#repositorymap)
 - [Introduction](#introduction)
 - [Motivation](#motivation)
-- [Achivements and contributions](#achivements_and_contributions)
+- [Achivements and contributions](#achivementsandcontributions)
 - [Setup](#setup)
 - [Usage](#usage)
 - [Configuration](#configuration)
