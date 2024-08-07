@@ -111,9 +111,9 @@ Runing the code completley will show case models and garments for selection, aft
 now let us look into different experiments that have been done:
 ![](./Figures/Slide3.png)
 for more details here are the examples as  rendered videos:
-[![Watch the video]()](./output/renderfiles/render.mp4)
-[![Watch the video]()](./output2/renderfiles/render.mp4)
-[![Watch the video]()](./output3/renderfiles/render.mp4)
+![[]()](./output/renderfiles/render.mp4)
+[![W]()](./output2/renderfiles/render.mp4)
+[![Wat]()](./output3/renderfiles/render.mp4)
 
 ## Methodology
 
