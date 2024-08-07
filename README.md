@@ -84,7 +84,7 @@ now, we recommend to leave values as defult but if you have the intreset you can
 
 ```
 defualt vales are :
-    render = False
+    render: bool = False
     chunk_size: int = 8192, #check your VRAM
     padding: int = 16, #for CNN model padding
     foreground_ratio: float = 0.85, 
@@ -93,8 +93,13 @@ defualt vales are :
 ```
 all of these variables are reacheable using the dif3d_viton_run method. like the code below:
 ```python
-test.dif3d_viton_run(render=True)
+test.dif3d_viton_run()
 ```
+```
+test.dif3d_viton_run(render=True,  mc_resolution: int = 512)
+```
+
+also you cam use [demo.ipynb](./demo.ipynb) file that is already contained in the repository.
 after setting the variables, you can run the cell/ python file. after running the code there should appear a menu of models and a menu of garments follow the instructions below for reaching out the output.
 
 until now if you have followed you will notice the program created a out put folder with three sub folders of different outputs what will be produced during the work.
