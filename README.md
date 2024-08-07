@@ -111,9 +111,13 @@ Runing the code completley will show case models and garments for selection, aft
 now let us look into different experiments that have been done:
 ![](./Figures/Slide3.png)
 for more details here are the examples as  rendered videos:
-![](https://github.com/Mehdialmoo/DIF3D-VITON/blob/main/output/renderfiles/render.mp4)
-[[![W]()](./output2/renderfiles/render.mp4)](https://github.com/Mehdialmoo/DIF3D-VITON/blob/main/output2/renderfiles/render.mp4)
-[[![Wat]()](./output3/renderfiles/render.mp4)](https://github.com/Mehdialmoo/DIF3D-VITON/blob/main/output3/renderfiles/render.mp4)
+
+https://github.com/user-attachments/assets/9722abb3-683b-4eb0-93b6-bef0ae492f3f
+
+https://github.com/user-attachments/assets/040d020e-45ce-4510-8503-5c11533740d6
+
+
+
 
 ## Methodology
 
