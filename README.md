@@ -39,7 +39,8 @@ Table of Contents:
 ```
 ## Introduction
 The DIF3D-VITON system operates entirely within the digital realm, revolutionising the way humans interact with clothing. Beginning with a user-provided photograph a snapshot of the body. This image serves as the foundation for constructing a digital mannequin. The next step, selecting a clothing piece, dress, shirt, jacket, and more which will fold on the mannequin where size, fit, and style are all considered to create a three-dimensional representation of your body shape and proportions. With DIF3D-VITON, users can explore countless outfits virtually. Within simple clicks, followed by a couple of minutes of loading, the user can have a glimpse of their 3D representation wearing the selected clothing unit. 
-In summary, DIF3D-VITON invites users to dress up with pixels, transforming people’s perception of fashion and enhancing the online shopping experience. The simplified pipeline which leads to 3D mesh creation using DIF3D-VITON is shown in Figure 3, down below. 
+
+this project was influenced by to main project :
 
 
 ## Motivation
@@ -129,8 +130,13 @@ after setting the variables, you can run the cell/ python file. after running th
 
 until now if you have followed you will notice the program created a out put folder with three sub folders of different outputs what will be produced during the work.
 ## Runtime
-
-
+After running succesfully there will be a menu which pops up from refrence models as shown below:
+![]()
+![]()
+there will be 20 pages of models and garments selection, which can be selected, based on the following first select a model image, secondly select the garment image to start the model. here are the button menu "n"or"N" for next page, "p"or"P" for previous page,  "s"or"S" to select a model/cloth, x"or"X" to exit and "g"or"G" for to create viton sample.
+by pressing "s" or "S" then you need to enter you selected image name completly with the type in this case ".jpg", after selecting for example the selected items are "" and "" next the system shows the selected items as whon below:
+![]()
+then this system starts to fistly synthesising VTO image, and then feeding the 3D diffusion to create 3D mesh.
 ## Results
 Runing the code completley will show case models and garments for selection, after selecting and the system goes through preprocessing, VTO deforming and fitting then for 3D generation, finally results and saves the final results in a folder named output as defualt (but you can change that also)The runtime environment generates the following output:
 
