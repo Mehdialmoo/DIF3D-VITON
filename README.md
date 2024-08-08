@@ -1,4 +1,4 @@
-# DIF3D_VITON: 3D Model Generation from Images
+# DIF3D_VITON: Diffusion 3D Virtual Try-on
 
 ![](./Figures/Slide4.png)
 
@@ -10,8 +10,10 @@ Table of Contents:
 - [Setup](#setup)
 - [Usage](#usage)
 - [Configuration](#configuration)
+- [Runtime](#runtime)
 - [Results](#results)
 - [Methodology](#methodology)
+- [System](#system)
 - [Conclusion](#conclusion)
 
 ## Repositorymap
