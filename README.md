@@ -158,7 +158,7 @@ https://github.com/user-attachments/assets/f720418b-c707-419f-bb33-193b3d9a0d64
 ## Methodology
 The methodology of the DIF3D-VITON study is designed to create an advanced 3D virtual try-on (VTO) system that enhances the online shopping experience by providing realistic garment fitting. The approach is structured into several key components:
 
-![](./Figures/Slide2.jpg)
+![](./Figures/Slide2.JPG)
 
 + ### Data Collection:
     The study utilizes a sub-dataset from VITON-HD, which includes high-resolution images of various clothing items and corresponding user images. This dataset is crucial for training the model to recognize and accurately render different garments on diverse body types.
@@ -170,7 +170,7 @@ The architecture consists of two main phases: the Image Generation Phase and the
 Image Generation Phase: This includes a try-on condition generator that deforms the clothing image to fit the user's body, producing a segmentation map that aligns the garment with the user's pose.
 3D Generation Phase: This phase involves extracting depth information, generating point clouds, and ultimately creating a detailed 3D mesh of the garment on the user.
 
-![](./Figures/Slide1.jpg)
+![](./Figures/Slide1.JPG)
 
 + ### Image Processing Techniques:
     The methodology incorporates advanced image processing techniques, including human pose estimation to accurately align clothing with the user's body. This ensures that the garment fits realistically based on the user's posture.The system also utilizes appearance flow methods to warp the clothing based on the original garment's texture and features, enhancing the realism of the virtual try-on experience.
