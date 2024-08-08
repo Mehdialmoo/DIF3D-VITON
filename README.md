@@ -50,29 +50,27 @@ The motivation behind the DIF3D-VITON study stems from the growing demand for en
 
 ## Achivements and contributions
 
-#### Innovative Use of Diffusion Models:
-DIF3D-VITON integrates diffusion models to enhance the accuracy of 3D garment fitting. This approach allows for the generation of high-fidelity 3D representations of clothing that align closely with the user's body shape and pose.
+* #### Innovative Use of Diffusion Models:
+    DIF3D-VITON integrates diffusion models to enhance the accuracy of 3D garment fitting. This approach allows for the generation of high-fidelity 3D representations of clothing that align closely with the user's body shape and pose.
 
-##### Addressing Common Challenges:
-The system effectively tackles prevalent challenges in virtual try-on technology, such as misalignment and occlusion. By ensuring accurate garment fitting and realistic visualizations, DIF3D-VITON improves user satisfaction.
+* #### Addressing Common Challenges:
+    The system effectively tackles prevalent challenges in virtual try-on technology, such as misalignment and occlusion. By ensuring accurate garment fitting and realistic visualizations, DIF3D-VITON improves user satisfaction.
 
-#### Realistic 3D Reconstruction:
-The system achieves fully textured 3D meshes through refined shape field-based reconstruction. This method extracts shape features from 2D images, significantly improving the realism of the virtual try-on experience.
+* #### Realistic 3D Reconstruction:
+    The system achieves fully textured 3D meshes through refined shape field-based reconstruction. This method extracts shape features from 2D images, significantly improving the realism of the virtual try-on experience.
 
-#### Enhanced Visual Quality:
-The system demonstrates superior visual quality in virtual try-on results compared to existing methods. The use of advanced algorithms results in more realistic and appealing garment representations.
+* #### Enhanced Visual Quality:
+    The system demonstrates superior visual quality in virtual try-on results compared to existing methods. The use of advanced algorithms results in more realistic and appealing garment representations.
 
 
-#### Contribution to Research and Development:
-The research conducted in developing DIF3D-VITON contributes to the broader field of artificial intelligence and computer vision, providing insights and methodologies that can be applied to other areas of virtual reality and augmented reality.
+* #### Contribution to Research and Development:
+    The research conducted in developing DIF3D-VITON contributes to the broader field of artificial intelligence and computer vision, providing insights and methodologies that can be applied to other areas of virtual reality and augmented reality.
 
-#### Seamless User Experience:
-By providing a streamlined process for users to visualize clothing on their digital avatars, DIF3D-VITON enhances the online shopping experience. Users can easily upload their images and see how different garments will look on them without the need for physical fitting.
+* #### Seamless User Experience:
+    By providing a streamlined process for users to visualize clothing on their digital avatars, DIF3D-VITON enhances the online shopping experience. Users can easily upload their images and see how different garments will look on them without the need for physical fitting.
 
-#### Personalization in Fashion:
-DIF3D-VITON allows for highly personalized shopping experiences by enabling users to visualize how specific clothing items will fit their unique body shapes and styles. This personalization can lead to better purchasing decisions.
-
-In summary, DIF3D-VITON represents a significant advancement in 3D virtual try-on technology, contributing to improved user experiences, enhanced garment visualization, and potential benefits for the fashion retail industry. Its achievements highlight the effectiveness of integrating advanced AI techniques in practical applications.
+* #### Personalization in Fashion:
+    DIF3D-VITON allows for highly personalized shopping experiences by enabling users to visualize how specific clothing items will fit their unique body shapes and styles. This personalization can lead to better purchasing decisions.
 
 ## Setup
 To be able to use the code firstly, run the following command :
@@ -160,19 +158,22 @@ https://github.com/user-attachments/assets/f720418b-c707-419f-bb33-193b3d9a0d64
 ## Methodology
 The methodology of the DIF3D-VITON study is designed to create an advanced 3D virtual try-on (VTO) system that enhances the online shopping experience by providing realistic garment fitting. The approach is structured into several key components:
 
-### Data Collection:
-The study utilizes a sub-dataset from VITON-HD, which includes high-resolution images of various clothing items and corresponding user images. This dataset is crucial for training the model to recognize and accurately render different garments on diverse body types.
+![](./Figures/Slide2.jpg)
+
++ ### Data Collection:
+    The study utilizes a sub-dataset from VITON-HD, which includes high-resolution images of various clothing items and corresponding user images. This dataset is crucial for training the model to recognize and accurately render different garments on diverse body types.
 The dataset is pre-processed to ensure consistency in image quality and to facilitate effective training of the neural networks.
 
-### Model Architecture:
-The DIF3D-VITON system employs a novel architecture that integrates diffusion models for 3D reconstruction. This approach allows for the generation of detailed 3D meshes from 2D images.
++ ### Model Architecture:
+    The DIF3D-VITON system employs a novel architecture that integrates diffusion models for 3D reconstruction. This approach allows for the generation of detailed 3D meshes from 2D images.
 The architecture consists of two main phases: the Image Generation Phase and the 3D Generation Phase. Each phase is further divided into sub-stages:
 Image Generation Phase: This includes a try-on condition generator that deforms the clothing image to fit the user's body, producing a segmentation map that aligns the garment with the user's pose.
 3D Generation Phase: This phase involves extracting depth information, generating point clouds, and ultimately creating a detailed 3D mesh of the garment on the user.
 
-### Image Processing Techniques:
-The methodology incorporates advanced image processing techniques, including human pose estimation to accurately align clothing with the user's body. This ensures that the garment fits realistically based on the user's posture.
-The system also utilizes appearance flow methods to warp the clothing based on the original garment's texture and features, enhancing the realism of the virtual try-on experience.
+![](./Figures/Slide1.jpg)
+
++ ### Image Processing Techniques:
+    The methodology incorporates advanced image processing techniques, including human pose estimation to accurately align clothing with the user's body. This ensures that the garment fits realistically based on the user's posture.The system also utilizes appearance flow methods to warp the clothing based on the original garment's texture and features, enhancing the realism of the virtual try-on experience.
 
 ### System
 we conducted experiments on a personal computer running Windows 11. The hardware configuration included an Nvidia 4080 graphics card with 8GB VRAM and an Intel Gen 13th CPU with 16GB RAM
