@@ -131,13 +131,16 @@ after setting the variables, you can run the cell/ python file. after running th
 until now if you have followed you will notice the program created a out put folder with three sub folders of different outputs what will be produced during the work.
 ## Runtime
 After running succesfully there will be a menu which pops up from refrence models as shown below:
-![](./Figures/m1.png)
-![](./Figures/m2.png)
+![](./Figures/m1.png) ![](./Figures/m2.png)
 there will be 20 pages of models and garments selection, which can be selected, based on the following first select a model image, secondly select the garment image to start the model. here are the button menu "n"or"N" for next page, "p"or"P" for previous page,  "s"or"S" to select a model/cloth, x"or"X" to exit and "g"or"G" for to create viton sample.
 by pressing "s" or "S" then you need to enter you selected image name completly with the type in this case ".jpg", after selecting for example the selected items are "00017_00.jpg" and "02660_00.jpg" next the system shows the selected items as whon below:
+
 ![](./Figures/s1.png)
+
 then this system starts to fistly synthesising VTO image, and then feeding the 3D diffusion to create 3D mesh.
+
 ![](./Figures/s2.png)
+
 ## Results
 Runing the code completley will show case models and garments for selection, after selecting and the system goes through preprocessing, VTO deforming and fitting then for 3D generation, finally results and saves the final results in a folder named output as defualt (but you can change that also)The runtime environment generates the following output:
 
@@ -147,7 +150,9 @@ Runing the code completley will show case models and garments for selection, aft
 + #### A 3D mesh in the output/3dfiles/ directory.
 
 now let us look into different experiments that have been done:
+
 ![](./Figures/Slide3.png)
+
 here are the examples as  rendered videos, created with enabling render option:
 
 https://github.com/user-attachments/assets/9722abb3-683b-4eb0-93b6-bef0ae492f3f
