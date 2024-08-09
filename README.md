@@ -44,6 +44,9 @@ The DIF3D-VITON system operates entirely within the digital realm, revolutionisi
 
 this project was influenced by to main project :
 
+[DIF3D](https://github.com/Mehdialmoo/DIF3D)
+
+[HR-Viton](https://github.com/sangyun884/HR-VITON)
 
 ## Motivation
 The motivation behind the DIF3D-VITON study stems from the growing demand for enhanced online shopping experiences in the fashion industry, where traditional methods of virtual try-on often fall short of providing realistic and personalized visualizations of clothing. As online retail continues to expand, consumers face challenges such as sizing inaccuracies and the inability to visualize how garments will fit and look on their unique body shapes. The study aims to address these issues by developing a novel 3D virtual try-on system that leverages deep learning and computer vision techniques to create high-resolution, detailed 3D models from just a single image of the user and a garment. This innovative approach not only seeks to improve user satisfaction and engagement but also aims to reduce return rates associated with online purchases, contributing to a more efficient and effective online shopping experience. By tackling the technical limitations and complexities of existing methods, the study aspires to revolutionize the way consumers interact with fashion in a digital environment.
