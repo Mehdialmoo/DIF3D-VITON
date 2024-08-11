@@ -15,7 +15,6 @@ import matplotlib.pyplot as plt
 # import functions
 from tqdm import tqdm
 from tsr.system import TSR
-
 from tsr.utils import save_video
 from tsr.gaussianutil import Gaussian
 from IPython.display import clear_output
@@ -193,14 +192,24 @@ class Runtime():
 
 class dif3D_Viton():
     def __init__(self):
+        # Set the root directory to the current working directory
         self.root = pathlib.Path().resolve()
+
+        # Change the current working directory to the root directory
         os.chdir(self.root)
+
+        # Set the paths to the Viton directory and data directory
         self.VTN_pth = "./viton"
         self.DATA_pth = "./viton/data"
+
+        # Ignore any warning messages
         warnings.filterwarnings('ignore')
+
+        # Enable tqdm progress bars for pandas operations
         tqdm.pandas()
 
     def viton_sample_generator(self):
+        # Define a list of image file names
         image = [
             "00017_00.jpg", "00017_00.jpg",
             "13891_00.jpg", "02372_00.jpg",
@@ -215,8 +224,8 @@ class dif3D_Viton():
             "02660_00.jpg", "08321_00.jpg",
             "08079_00.jpg", "03797_00.jpg",
             "03802_00.jpg", "04096_00.jpg",]
-
-        clothes = clothes = [
+        # Define a list of clothes file names
+        clothes = [
             "04131_00.jpg", "02660_00.jpg",
             "06778_00.jpg", "07874_00.jpg",
             "02372_00.jpg", "00828_00.jpg",
@@ -230,30 +239,53 @@ class dif3D_Viton():
             "13004_00.jpg", "08079_00.jpg",
             "08321_00.jpg", "03745_00.jpg",
             "04096_00.jpg", "03922_00.jpg"]
-
+        # Create a Pandas DataFrame with two columns: "image" and "clothes"
         df = pd.DataFrame({"image": image, "clothes": clothes})
+        # Save the DataFrame to a CSV file named
+        # "pairs.txt" in the DATA_pth directory
         df.to_csv(
             f"{self.DATA_pth}/pairs.txt",
             index=False, header=False, sep=" ")
 
+        # Print the DataFrame to the console
         print(f"list of images and clothes:\n {df}\n")
-        print("starting HR_Viton...")
-        self.HR_viton_run()
-        print("shutingdown HR_Viton...")
+
+        # Print a message indicating that Viton is starting
+        print("starting Viton...")
+
+        # Call the viton_run method
+        self.viton_run()
+
+        # Print a message indicating that Viton is shutting down
+        print("shutingdown Viton...")
+
+        # Change the current working directory to the root directory
         os.chdir(self.root)
+
+        # Loop through each image and clothes pair
         for idx in tqdm(range(len(image)), total=len(image),
                         desc="Processing images"):
+            # Read the original image and clothes image using plt.imread
             self.img_ori = plt.imread(
                 f"{self.DATA_pth}/test/image/{image[idx]}")
             self.img_clo = plt.imread(
                 f"{self.DATA_pth}/test/cloth/{clothes[idx]}")
-            img_new = f"{self.DATA_pth}/output/{image[idx][:-4]}_{clothes[idx][:-4]}.png"
+            # Create a new file name for the output image
+            img_new = f"{self.DATA_pth}/output/{image[idx][:-4]}\
+                    _{clothes[idx][:-4]}.png"
+            # Call the Viton_res method with the output file name
             self.Viton_res(out_path=img_new)
+        # Wait for user input before exiting
         _ = input()
+        # Exit the program with status code 0
         sys.exit(0)
 
     def file_number(path):
+        # Use the glob module to find all files in the specified directory
+        # The '*' is a wildcard that matches any file name
         num_files = len(glob.glob(path + '/*'))
+
+        # Print a message to the user indicating the number of files found
         print(f"There are {num_files} files in the directory.")
 
     def image_showcase(self, path, pg):
@@ -334,16 +366,36 @@ class dif3D_Viton():
         print(f"selected set is \n{df}")
 
     def menu(self):
+        # Define the paths to the image and cloth directories
         image_path = f"{self.DATA_pth}/test/image/"
         cloth_path = f"{self.DATA_pth}/test/cloth/"
+
+        # Call the selector method to select an image
         self.m = self.selector(image_path)
+
+        # Call the selector method to select a cloth
         self.c = self.selector(cloth_path)
+
+        # Call the M_C_selector method to
+        # select the image and cloth combination
         self.M_C_selector()
-        print("starting HR_Viton...")
-        self.HR_viton_run()
-        print("shutingdown HR_Viton...")
+
+        # Print a message indicating that Viton is starting
+        print("starting Viton...")
+
+        # Call the viton_run method
+        self.viton_run()
+
+        # Print a message indicating that Viton is shutting down
+        print("shutingdown Viton...")
+
+        # Change the current working directory to the root directory
         os.chdir(self.root)
+
+        # Create a new file name for the output image
         self.output = f"{self.DATA_pth}/output/{self.m[:-4]}_{self.c[:-4]}.png"
+
+        # Call the Viton_res method with the output file name
         self.Viton_res(self.output)
 
     def selector(self, path):
@@ -352,6 +404,7 @@ class dif3D_Viton():
         selector = None
         while True:
             while ((selector is None) and (1 <= i <= 20)):
+                # menu kept alive while runing
                 print(
                     f"""based on the following you can select a model image,
                     from the below images and from 1-20 pages:
@@ -359,7 +412,9 @@ class dif3D_Viton():
                     "s"or"S" to select a model/cloth)
                     ("x"or"X" to exit and "g"or"G" for to create viton sample)
                     {i} of 20 pages""")
+                # Display the images in the directory
                 self.image_showcase(path, pg=i)
+                # Get user input
                 selector = input("\n>>>")
                 if selector.capitalize() == "N":
                     i += 1
@@ -383,14 +438,14 @@ class dif3D_Viton():
                 else:
                     clear_output()
                     print("invalid input!!!")
-                    time.sleep(3)  # pause for 5 seconds
+                    time.sleep(3)  # pause for 3 seconds
                     selector = None
                 clear_output()
             else:
                 i = 1
                 selector = None
 
-    def HR_viton_run(self):
+    def viton_run(self):
 
         # Define the command and arguments
         cmd = ["python", "test_generator.py"]
@@ -410,27 +465,34 @@ class dif3D_Viton():
         subprocess.run(cmd + args)
 
     def Viton_res(self, out_path):
-        # ===================================================================
+        # Read the generated image from the output path
         img_new = plt.imread(out_path, 0)
+
+        # Create a new figure with a specified size
         plt.figure(figsize=(10, 8))
+
+        # Define a grid layout for the subplots
         grid = plt.GridSpec(2, 3, wspace=0, hspace=0.2)
 
+        # Display the original image
         plt.subplot(grid[0, 0])
         plt.imshow(self.img_ori)
-        plt.axis("off")
+        plt.axis("off")  # Turn off axis for better visualization
         plt.title("Original Image")
 
+        # Display the cloth image
         plt.subplot(grid[1, 0])
         plt.imshow(self.img_clo)
-        plt.axis("off")
+        plt.axis("off")  # Turn off axis for better visualization
         plt.title("Cloth Image")
 
+        # Display the generated image
         plt.subplot(grid[:, 1:])
-        # =======================================================================================================
         plt.imshow(img_new)
-        plt.axis("off")
+        plt.axis("off")  # Turn off axis for better visualization
         plt.title("Generated Image")
 
+        # Show the plot
         plt.show()
 
     def dif3d_viton_run(self,
